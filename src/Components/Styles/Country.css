@@ -1,0 +1,45 @@
+.countryBodyParent{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgb(43, 0, 48);
+}
+
+.countryBody{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+    padding-left: 2.5rem;
+}
+
+.load{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    background-color: rgb(43, 0, 48);
+}
+
+@media screen and (max-width: 990px){
+    .countryBody{
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media screen and (max-width: 380px){
+    .countryBody{
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  @media (max-width: 480px) {
+    .countryBody {
+      grid-template-columns: 1fr; 
+      gap: 1rem; 
+      padding: 0.5rem; 
+    }
+  }

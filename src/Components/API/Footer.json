@@ -1,0 +1,17 @@
+[
+  {
+    "icon": "MdPlace",
+    "title": "Find us",
+    "details": "66, Mahatma Gandhi Rd,Kolkata"
+  },
+  {
+    "icon": "IoCallSharp",
+    "title": "Call us",
+    "details": "033 22332233"
+  },
+  {
+    "icon": "TbMailPlus",
+    "title": "Mail us",
+    "details": "dontdisturb@gmail.com"
+  }
+]

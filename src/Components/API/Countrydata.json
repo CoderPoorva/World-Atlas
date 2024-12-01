@@ -1,0 +1,84 @@
+[
+  {
+    "id": 0,
+    "countryName": "World",
+    "capital": "No Capital",
+    "population": "82300000",
+    "interestingFact": "There are 195 countries in the world today, including 193 United Nations member states and 2 observer states.",
+    "Flora":"Flora worldwide includes diverse plants like sequoias, orchids, and cacti.",
+    "Fauna":"Fauna ranges from polar bears and tigers to kangaroos and whales, each adapted to their unique habitats."
+  },
+  {
+    "id": 1,
+    "countryName": "India",
+    "capital": "New Delhi",
+    "population": "146000000",
+    "interestingFact": "India is the world's largest democracy and is home to over 2,000 distinct ethnic groups and more than 1,600 languages.",
+    "Flora":"Rich biodiversity with tropical rainforests, deciduous trees, and medicinal plants",
+    "Fauna":"Bengal tiger, Indian elephant, Indian rhinoceros, and peacock."
+  },
+  {
+    "id": 2,
+    "countryName": "Nepal",
+    "capital": "Kathmandu",
+    "population": 29609623,
+    "interestingFact": "Nepal is home to Mount Everest, the tallest mountain in the world, standing at 8,848 meters.",
+    "Flora":"Alpine plants, rhododendrons, oak, and pine forests.",
+    "Fauna":"Bengal tiger, snow leopard, red panda, and Himalayan monal."
+     
+  },
+  {
+    "id": 3,
+    "countryName": "Egypt",
+    "capital": "Cairo",
+    "population": 104258327,
+    "interestingFact": "The Pyramids of Giza are one of the Seven Wonders of the Ancient World.",
+    "Flora":"Desert vegetation, date palms, acacia, and papyrus.",
+    "Fauna":"Nile crocodile, Egyptian goose, sand fox, and dromedary camel."
+  },
+  {
+    "id": 4,
+    "countryName": "Australia",
+    "capital": "Canberra",
+    "population": 25687041,
+    "interestingFact": "Australia is home to the Great Barrier Reef, the largest coral reef system in the world.",
+    "Flora":"Eucalyptus, acacia, and Australian grasslands.",
+    "Fauna":"Kangaroo, koala, platypus, and emu."
+  },
+  {
+    "id": 5,
+    "countryName": "Brazil",
+    "capital": "Brasilia",
+    "population": 213993437,
+    "interestingFact": "Brazil is home to the Amazon Rainforest, the largest tropical rainforest in the world.",
+    "Flora":"Amazon rainforest, rubber trees, and Brazil nuts.",
+    "Fauna":"Jaguar, capybara, sloth, and toucan."
+  },
+  {
+    "id": 6,
+    "countryName": "France",
+    "capital": "Paris",
+    "population": 67407241,
+    "interestingFact": "The Eiffel Tower in Paris was once the tallest man-made structure in the world.",
+    "Flora":"Vineyards, lavender fields, and temperate forests.",
+    "Fauna":" Red deer, wild boar, European rabbit, and European brown bear."
+  },
+  {
+    "id": 7,
+    "countryName": "Russia",
+    "capital": "Moscow",
+    "population": 1324216107,
+    "interestingFact": "Russia is the largest country in the world by area, covering more than 17 million square kilometers.",
+    "Flora":"Taiga forests, birch trees, and tundra vegetation.",
+    "Fauna":"Siberian tiger, brown bear, snow leopard, and reindeer."
+  },
+  {
+    "id": 8,
+    "countryName": "China",
+    "capital": "Beijing",
+    "population": 1444216107,
+    "interestingFact": "The Great Wall of China is visible from space on rare occasions.",
+    "Flora":"Bamboo forests, ginkgo trees, and rice paddies.",
+    "Fauna":"Giant panda, golden monkey, Tibetan antelope, and Chinese alligator."
+  }
+]

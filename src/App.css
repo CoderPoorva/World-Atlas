@@ -1,0 +1,28 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  scrollbar-width: thin; /* For Firefox */
+  scrollbar-color: rgb(43, 0, 48) rgb(100, 50, 100); 
+}
+
+::-webkit-scrollbar {
+  width: 8px; 
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(100, 50, 100); 
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(43, 0, 48); 
+  border-radius: 10px; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(70, 20, 75); 
+}
