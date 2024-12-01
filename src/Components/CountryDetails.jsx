@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useTransition } from "react";
 import { NavLink, useParams } from "react-router-dom";
 import { getCountryData } from "./API/postApi";
-import Loader from "./loader";
+import Loader from "./Loader";
 import { Card, Section } from "./Styles/CountryDetailsCard";
 import { Btn2 } from "./Styles/BtnMUI";
 import './Styles/CountryDetailsCard.css'
