@@ -2,7 +2,7 @@ import React, { useEffect, useState, useTransition } from "react";
 import { NavLink, useParams } from "react-router-dom";
 import { getCountryData } from "./API/postApi";
 import Loader from "./Loader";
-import { Card, Img, Load, Section } from "./Styles/CountryDetailsCard";
+import { Card, Load, Section } from "./Styles/CountryDetailsCard";
 import { Button } from "@mui/material";
 
 const CountryDetails = () => {
@@ -30,9 +30,9 @@ const CountryDetails = () => {
     <Section>
       {country.length > 0 ? (
         <Card>
-          <Img className="img">
+          <div className="img">
             <img src={country[0].flags.png} alt={country[0].name.official}/>
-          </Img>
+          </div>
           <div className="containerInfo">
             <h1 style={{fontSize:"2rem", color:"#0c8201", textDecoration:"underline", marginBottom:"1rem"}}>{country[0].name.official}</h1>
             <div>
