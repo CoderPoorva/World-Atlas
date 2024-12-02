@@ -1,7 +1,7 @@
 import React from 'react'
-import { Btn2, Btn3 } from './Styles/BtnMUI'
 import { NavLink, useNavigate, useNavigation } from 'react-router-dom'
 import './Styles/error.css'
+import { Button } from '@mui/material';
 
 const ErrorPage = () => {
 
@@ -18,9 +18,9 @@ const ErrorPage = () => {
      </div>
      <div className='secondPart'>
       <NavLink to="/">
-      <Btn2>Go to Home</Btn2>
+      <Button variant="contained">Go to Home</Button>
       </NavLink>
-      <Btn3 onClick={handleOnClick}>Previous page</Btn3>
+      <Button variant="outlined" onClick={handleOnClick}>Previous page</Button>
      </div>
     </div>
   )

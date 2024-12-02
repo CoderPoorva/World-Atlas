@@ -2,9 +2,8 @@ import React, { useEffect, useState, useTransition } from "react";
 import { NavLink, useParams } from "react-router-dom";
 import { getCountryData } from "./API/postApi";
 import Loader from "./Loader";
-import { Card, Section } from "./Styles/CountryDetailsCard";
-import { Btn2 } from "./Styles/BtnMUI";
-import './Styles/CountryDetailsCard.css'
+import { Card, Img, Load, Section } from "./Styles/CountryDetailsCard";
+import { Button } from "@mui/material";
 
 const CountryDetails = () => {
   const params = useParams();
@@ -25,68 +24,66 @@ const CountryDetails = () => {
     });
   }, [params.id]);
 
-  if (isPending) return <Loader />;
+  if (isPending) return(<Load><Loader /></Load>) ;
 
   return (
     <Section>
       {country.length > 0 ? (
         <Card>
-          <div className="img">
-            <img src={country[0].flags.png} alt={country[0].name.official} />
-          </div>
+          <Img className="img">
+            <img src={country[0].flags.png} alt={country[0].name.official}/>
+          </Img>
           <div className="containerInfo">
-            <h1>{country[0].name.official}</h1>
+            <h1 style={{fontSize:"2rem", color:"#0c8201", textDecoration:"underline", marginBottom:"1rem"}}>{country[0].name.official}</h1>
             <div>
-              <p>
-                <span className="card-description"> Capital:</span>
+              <p style={{fontSize:"1.5rem"}}>
+                <span className="card-description" style={{lineHeight:"2rem", fontWeight:"bold"}}> Capital: </span>
                 {country[0].capital}
               </p>
             </div>
-            <p>
-              <span className="card-description"> Native Names:</span>
+            <p style={{fontSize:"1.5rem"}}>
+              <span className="card-description" style={{lineHeight:"2rem", fontWeight:"bold"}}> Native Names:</span>
               {Object.keys(country[0].name.nativeName)
                 .map((key) => country[0].name.nativeName[key].common)
                 .join(", ")}
             </p>
-            <p>
-              <span className="card-description"> Population: </span>
+            <p style={{fontSize:"1.5rem"}}>
+              <span className="card-description" style={{lineHeight:"2rem", fontWeight:"bold"}}> Population: </span>
               {country[0].population}
             </p>
-            <p>
-              <span className="card-description"> Continent:</span>
+            <p style={{fontSize:"1.5rem"}}>
+              <span className="card-description" style={{lineHeight:"2rem", fontWeight:"bold"}}> Continent:</span>
               {country[0].region}
             </p>
-            <p>
-              <span className="card-description"> Sub Region:</span>
+            <p style={{fontSize:"1.5rem"}}>
+              <span className="card-description" style={{lineHeight:"2rem", fontWeight:"bold"}}> Sub Region:</span>
               {country[0].subregion}
             </p>
-            <p>
-              <span className="card-description"> Capital:</span>
-              {country[0].capital}
-            </p>
-
-            <p>
-              <span className="card-description">Top Level Domain:</span>
+            <p style={{fontSize:"1.5rem"}}>
+              <span className="card-description" style={{lineHeight:"2rem", fontWeight:"bold"}}>Top Level Domain:</span>
               {country[0].tld[0]}
             </p>
-            <p>
-              <span className="card-description"> Currencies: </span>
+            <p style={{fontSize:"1.5rem"}}>
+              <span className="card-description" style={{lineHeight:"2rem", fontWeight:"bold"}}> Currencies: </span>
               {Object.keys(country[0].currencies)
                 .map((curElem) => country[0].currencies[curElem].name)
                 .join(", ")}
-              {Object.keys(country[0].currencies)
+                <span> (
+                {Object.keys(country[0].currencies)
                 .map((curElem) => country[0].currencies[curElem].symbol)
-                .join(", ")}
+                .join(", ")})
+                </span>
+             
             </p>
-            <p>
-              <span className="card-description">Languages: </span>
+            <p style={{fontSize:"1.5rem"}}>
+              <span className="card-description" style={{lineHeight:"2rem", fontWeight:"bold"}}>Languages: </span>
               {Object.keys(country[0].languages)
                 .map((key) => country[0].languages[key])
                 .join(", ")}
             </p>
           </div>
           <NavLink to="/country" className="backBtn">
-            <Btn2>Go Back</Btn2>
+            <Button variant="contained">Go Back</Button>
           </NavLink>
         </Card>
       ) : (

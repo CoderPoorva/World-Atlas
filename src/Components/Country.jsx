@@ -1,10 +1,9 @@
 import React, { useEffect, useState, useTransition } from "react";
 import { getCountry } from "./API/postApi";
-
 import CountryCard from "./CountryCard";
-import "./Styles/Country.css";
 import { SearchFilter } from "./SearchFilter";
 import Loader from "./Loader";
+import { CountryBody, CountryBodyParent, Load } from "./Styles/CountryStyle";
 
 const Country = () => {
   const [isPending, startTransition] = useTransition();
@@ -21,7 +20,12 @@ const Country = () => {
     });
   }, []);
 
-  if (isPending) return (<div className="load"><Loader /></div> );
+  if (isPending)
+    return (
+      <Load>
+        <Loader />
+      </Load>
+    );
 
   const searchCountry = (country) => {
     if (search) {
@@ -41,8 +45,8 @@ const Country = () => {
   );
 
   return (
-    <section className="countryBodyParent">
-       <SearchFilter
+    <CountryBodyParent className="countryBodyParent">
+      <SearchFilter
         search={search}
         setSearch={setSearch}
         filter={filter}
@@ -50,12 +54,12 @@ const Country = () => {
         countries={countries}
         setCountries={setCountries}
       />
-    <section className="countryBody">
-      {filterCountries.map((country) => {
-        return <CountryCard country={country} key={country.index} />;
-      })}
-    </section>
-    </section>
+      <CountryBody className="countryBody">
+        {filterCountries.map((country) => {
+          return <CountryCard country={country} key={country.index} />;
+        })}
+      </CountryBody>
+    </CountryBodyParent>
   );
 };
 

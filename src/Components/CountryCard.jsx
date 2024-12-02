@@ -1,37 +1,37 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom';
-import './Styles/CountryCard.css'
-import { Btn2 } from './Styles/BtnMUI';
+import { CountryCardContainer, CountryCards, CountryInfo } from './Styles/CountryCardStyle';
+import { Button, Typography } from '@mui/material';
 
 const CountryCard = ({country}) => {
   const { flags, name, population, region, capital } = country;
   return (
-    <li className="country-card">
-    <div className="container-card">
+    <CountryCards className="country-card">
+    <CountryCardContainer className="container-card">
       <img src={flags.svg} alt={flags.alt} />
 
-      <div className="countryInfo">
-        <p className="card-title">
-          {name.common}
-        </p>
+      <CountryInfo className="countryInfo">
+        <Typography variant="h5" gutterBottom sx={{fontWeight:"bold"}}>
+        {name.common}
+      </Typography>
         <p>
-          <span className="card-description">Capital:</span>
+          <span className="card-description" style={{fontWeight: "bold"}}>Capital:</span>
           {capital[0]}
         </p>
         <p>
-          <span className="card-description">Population:</span>
+          <span className="card-description" style={{fontWeight: "bold"}}>Population:</span>
           {population}
         </p>
         <p>
-          <span className="card-description">Region:</span> {region}
+          <span className="card-description" style={{fontWeight: "bold"}}>Region:</span> {region}
         </p>
        
        <NavLink to={`/country/${name.common}`}>
-       <Btn2>Read More</Btn2>
+       <Button variant="contained" sx={{marginTop:"1rem", fontSize:"10px"}}>Read More</Button>
        </NavLink>
-      </div>
-    </div>
-  </li>
+      </CountryInfo>
+    </CountryCardContainer>
+  </CountryCards>
   )
 }
 

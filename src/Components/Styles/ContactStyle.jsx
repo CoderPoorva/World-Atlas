@@ -5,7 +5,6 @@ display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
-background-color: rgb(43, 0, 48);
 color: rgb(255, 255, 255);
 padding: 10px;
 height: 80vh;
@@ -16,12 +15,12 @@ display: flex;
 flex-direction: column;  
 align-items: center;
 justify-content: center;
-background-color: rgb(91, 0, 101);
+background-color: rgb(215, 230, 251);
 margin:10px;
 padding: 20px;
 border-radius: 10px;
 height: 60vh;
-border-bottom: 5px solid rgb(255, 255, 255);
+border-bottom: 5px solid rgb(49, 63, 125);
 
 input{
   width: 200px;
@@ -29,7 +28,6 @@ input{
   margin: 10px;
   border-radius: 5px;
 }
-
 `
 
 

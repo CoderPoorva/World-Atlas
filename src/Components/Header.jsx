@@ -1,7 +1,9 @@
 import React, { useState } from "react";
-import "./Styles/Header.css";
 import { NavLink } from "react-router-dom";
 import MenuIcon from '@mui/icons-material/Menu';
+import { Hamburger, NavBar, NavLinks, NavParent } from "./Styles/HeaderStyle";
+import { Typography } from "@mui/material";
+import "./Styles/Header.css";
 
 const Header = () => {
 
@@ -12,11 +14,13 @@ const Header = () => {
   };
 
   return (
-    <div className="navparent">
-      <nav className="navbar">
-        <div className="logo">World Atlas</div>
-        <div className="hamburger" onClick={toggleMenu}><MenuIcon/></div>
-        <ul className={`nav-links ${isMenuOpen ? "active" : ""}`}>
+    <NavParent className="navparent">
+      <NavBar className="navbar">
+       <Typography variant="h5" gutterBottom sx={{fontWeight:"bold"}}>
+        World Atlas
+      </Typography>
+        <Hamburger className="hamburger" onClick={toggleMenu}><MenuIcon sx={{color:"black"}}/></Hamburger>
+        <NavLinks className={`nav-links ${isMenuOpen ? "active" : ""}`}>
           <li>
             <NavLink to="/" onClick={toggleMenu}>Home</NavLink>
           </li>
@@ -29,9 +33,9 @@ const Header = () => {
           <li>
             <NavLink to="/contact" onClick={toggleMenu}>Contact</NavLink>
           </li>
-        </ul>
-      </nav>
-    </div>
+        </NavLinks>
+      </NavBar>
+    </NavParent>
   );
 };
 

@@ -1,9 +1,7 @@
-import { FormControl, InputAdornment, InputLabel, MenuItem, Select, TextField } from "@mui/material";
-import ManageSearchOutlinedIcon from '@mui/icons-material/ManageSearchOutlined';
-import { Btn3 } from "./Styles/BtnMUI";
+import { Button, FormControl, InputAdornment, InputLabel, MenuItem, Select, TextField } from "@mui/material";
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
-import "./Styles/SearchFilter.css";
+import { SearchFilterCont } from "./Styles/SearchFilterStyle";
 
 
 export const SearchFilter = ({
@@ -34,7 +32,7 @@ export const SearchFilter = ({
   };
 
   return (
-    <section className="searchFilter container">
+    <SearchFilterCont className="searchFilter container">
       <div>
         <TextField
           id="input-with-icon-textfield"
@@ -45,35 +43,35 @@ export const SearchFilter = ({
           onChange={handleInputChange}
           variant="standard"
           sx={{
-            input: { color: "white" },
-            label: { color: "white" },
+            input: { color: "black" },
+            label: { color: "black" },
             "& .MuiInput-underline:before": {
-              borderBottomColor: "white",
+              borderBottomColor: "black",
             },
             "& .MuiInput-underline:hover:before": {
-              borderBottomColor: "white",
+              borderBottomColor: "black",
             },
             "& .MuiInput-underline:after": {
-              borderBottomColor: "white",
+              borderBottomColor: "black",
             },
           }}
         />
       </div>
 
       <div>
-        <Btn3 onClick={() => sortCountries("asc")}><ArrowUpwardIcon/></Btn3>
+        <Button variant="outlined" onClick={() => sortCountries("asc")}><ArrowUpwardIcon/></Button>
       </div>
 
       <div>
-        <Btn3 onClick={() => sortCountries("des")}><ArrowDownwardIcon/></Btn3>
+        <Button variant="outlined" onClick={() => sortCountries("des")}><ArrowDownwardIcon/></Button>
       </div>
 
       <div>
-        <FormControl variant="standard" sx={{ m: 1, minWidth: 120, "& .MuiInputBase-root": { color: "white" }, 
-        "& .MuiInputLabel-root": { color: "white" }, 
-        "& .MuiSvgIcon-root": { color: "white" }, "& .MuiInput-underline:before": { borderBottomColor: "white" }, 
-        "& .MuiInput-underline:hover:before": { borderBottomColor: "white" }, 
-        "& .MuiInput-underline:after": { borderBottomColor: "white" }, }}>
+        <FormControl variant="standard" sx={{ m: 1, minWidth: 120, "& .MuiInputBase-root": { color: "black" }, 
+        "& .MuiInputLabel-root": { color: "black" }, 
+        "& .MuiSvgIcon-root": { color: "black" }, "& .MuiInput-underline:before": { borderBottomColor: "black" }, 
+        "& .MuiInput-underline:hover:before": { borderBottomColor: "black" }, 
+        "& .MuiInput-underline:after": { borderBottomColor: "black" }, }}>
         <InputLabel id="demo-simple-select-standard-label">Region</InputLabel>
         <Select
           labelId="demo-simple-select-standard-label"
@@ -91,6 +89,6 @@ export const SearchFilter = ({
         </Select>
       </FormControl>
       </div>
-    </section>
+    </SearchFilterCont>
   );
 };

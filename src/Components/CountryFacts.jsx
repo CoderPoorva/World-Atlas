@@ -1,10 +1,10 @@
 import React from 'react'
-import './Styles/About.css'
-import { Card, CardContent, Typography } from '@mui/material'
+import { CardContent, Typography } from '@mui/material'
+import { CardBody } from './Styles/AboutStyle'
 
 const CountryFacts = ({country}) => {
   return (
-    <Card sx={{ width: 260 }} className='card'>
+    <CardBody>
       <CardContent>
         <Typography gutterBottom sx={{ color: 'text.primary', fontSize: 18 , fontWeight:'bold'}}>
           {country.countryName}
@@ -23,7 +23,7 @@ const CountryFacts = ({country}) => {
           Fauna: <Typography variant="body2" component='span' sx={{fontSize:14, color:'text.primary', fontWeight:'bold'}}>{country.Fauna}</Typography>
         </Typography>
       </CardContent>
-    </Card>
+    </CardBody>
   )
 }
 

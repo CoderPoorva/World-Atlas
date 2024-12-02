@@ -1,7 +1,7 @@
 import React from "react";
 import { ContactDiv, ContactForm } from "./Styles/ContactStyle";
-import { TextField, Typography } from "@mui/material";
-import { Btn2 } from "./Styles/BtnMUI";
+import { Button, TextField, Typography } from "@mui/material";
+
 
 const Contact = () => {
   const handleFormSubmit = (e) => {
@@ -22,16 +22,16 @@ const Contact = () => {
             label="Name"
             variant="standard"
             sx={{
-              input: { color: "white" },
-              label: { color: "white" },
+              input: { color: "black" },
+              label: { color: "black" },
               "& .MuiInput-underline:before": {
-                borderBottomColor: "white",
+                borderBottomColor: "black",
               },
               "& .MuiInput-underline:hover:before": {
-                borderBottomColor: "white",
+                borderBottomColor: "black",
               },
               "& .MuiInput-underline:after": {
-                borderBottomColor: "white",
+                borderBottomColor: "black",
               },
             }}
           />
@@ -41,16 +41,16 @@ const Contact = () => {
             type="email"
             variant="standard"
             sx={{
-              input: { color: "white" },
-              label: { color: "white" },
+              input: { color: "black" },
+              label: { color: "black" },
               "& .MuiInput-underline:before": {
-                borderBottomColor: "white",
+                borderBottomColor: "black",
               },
               "& .MuiInput-underline:hover:before": {
-                borderBottomColor: "white",
+                borderBottomColor: "black",
               },
               "& .MuiInput-underline:after": {
-                borderBottomColor: "white",
+                borderBottomColor: "black",
               },
               margin: "2rem",
             }}
@@ -65,23 +65,23 @@ const Contact = () => {
             sx={{
               width: "250px",
               padding: "10px",
-              input: { color: "white" },
-              label: { color: "white" },
+              input: { color: "black" },
+              label: { color: "black" },
               "& .MuiInput-underline:before": {
-                borderBottomColor: "white",
+                borderBottomColor: "black",
               },
               "& .MuiInput-underline:hover:before": {
-                borderBottomColor: "white",
+                borderBottomColor: "black",
               },
               "& .MuiInput-underline:after": {
-                borderBottomColor: "white",
+                borderBottomColor: "black",
               },
               "& .MuiInputBase-root": {
-                color: "white",
+                color: "black",
               },
             }}
           />
-          <Btn2 onClick={handleFormSubmit}>Sumbit</Btn2>
+          <Button variant="contained" onClick={handleFormSubmit}>Submit</Button>
         </ContactForm>
       </form>
     </ContactDiv>

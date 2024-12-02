@@ -3,8 +3,7 @@ import footerContact from './API/Footer.json'
 import OtherHousesIcon from '@mui/icons-material/OtherHouses';
 import CallIcon from '@mui/icons-material/Call';
 import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
-import { NavLink } from 'react-router-dom';
-import './Styles/Footer.css';
+import { Container, CopyRightArea, FooterContact, FooterSection, FooterText } from './Styles/FooterStyle';
 
 const Footer = () => {
 
@@ -15,30 +14,30 @@ const Footer = () => {
   };
 
   return (
-    <footer className="footer-section">
-      <div className="container">
+    <FooterSection className="footer-section">
+      <Container className="container">
         {footerContact.map((curData, index) => {
           const { icon, title, details } = curData;
           return (
-            <div className="footer-contact" key={index}>
+            <FooterContact className="footer-contact" key={index}>
               <div className="icon">{footerIcon[icon]}</div>
-              <div className="footer-contact-text">
+              <FooterText className="footer-contact-text">
                 <p>{title}</p>
                 <p>{details}</p>
-              </div>
-            </div>
+              </FooterText>
+            </FooterContact>
           );
         })}
-      </div>
+      </Container>
 
-      <div className="copyright-area">
+      <CopyRightArea className="copyright-area">
             <div className="copyright-text">
               <p>
                 Copyright &copy; 2024, All Right Reserved
               </p>
             </div>
-      </div>
-    </footer>
+      </CopyRightArea>
+    </FooterSection>
   )
 }
 
